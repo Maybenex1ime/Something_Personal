@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c721a688-0800-4be5-b8a5-ae8bfb6e0b1f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1sAyAACFRfn9q5IZivjvh3zg8K3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Android JUnit.MovesTest.setValidTiles">
+    <configuration name="MovesTest.setValidTiles" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MovesTest" />
+      <option name="METHOD_NAME" value="setValidTiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovesTest.testSetAttackTiles" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MovesTest" />
+      <option name="METHOD_NAME" value="testSetAttackTiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessBoardTest.GeneralInChecked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.ChessBoardTest" />
+      <option name="METHOD_NAME" value="GeneralInChecked" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MovesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovesTest.testCannon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MovesTest" />
+      <option name="METHOD_NAME" value="testCannon" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.MovesTest.setValidTiles" />
+        <item itemvalue="JUnit.ChessBoardTest.GeneralInChecked" />
+        <item itemvalue="JUnit.MovesTest" />
+        <item itemvalue="JUnit.MovesTest.testCannon" />
+        <item itemvalue="Android JUnit.MovesTest.testSetAttackTiles" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c721a688-0800-4be5-b8a5-ae8bfb6e0b1f" name="Default Changelist" comment="" />
+      <created>1620329543758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620329543758</updated>
+      <workItem from="1620329544784" duration="2186000" />
+      <workItem from="1620366702318" duration="594000" />
+      <workItem from="1622808290476" duration="1048000" />
+      <workItem from="1622829789363" duration="5406000" />
+      <workItem from="1622926558940" duration="2175000" />
+      <workItem from="1622972154853" duration="3545000" />
+      <workItem from="1623144203217" duration="10002000" />
+      <workItem from="1623276665231" duration="4437000" />
+      <workItem from="1623316010449" duration="26559000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="129" key="#Project_Structure" timestamp="1620329549530">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="440" y="129" key="#Project_Structure/0.30.1920.1050@0.30.1920.1050" timestamp="1620329549530" />
+    <state x="92" y="122" width="1736" height="866" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1623328132671">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="92" y="122" width="1736" height="866" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623328132671" />
+    <state x="765" y="271" key="#com.intellij.ide.util.MemberChooser" timestamp="1622834930722">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="765" y="271" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1622834930722" />
+    <state x="588" y="244" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1623147332754">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="588" y="244" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623147332754" />
+    <state x="743" y="449" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1623147672610">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="743" y="449" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623147672610" />
+    <state x="-1180" y="286" key="FileChooserDialogImpl" timestamp="1623276700679">
+      <screen x="-1920" y="6" width="1920" height="1050" />
+    </state>
+    <state x="-1180" y="286" key="FileChooserDialogImpl/0.30.1920.1050/-1920.6.1920.1050@-1920.6.1920.1050" timestamp="1623276700679" />
+    <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623148164209" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1623356130873">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623356130873" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1620331648610" />
+    <state x="664" y="447" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623147894865">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="664" y="447" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623147894865" />
+    <state x="511" y="291" width="898" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1623340838809">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="511" y="291" width="898" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623340838809" />
+    <state x="342" y="175" key="new project wizard" timestamp="1623147260377">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="342" y="175" key="new project wizard/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623147260377" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1623156000457">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/-1920.6.1920.1050@0.30.1920.1050" timestamp="1623156000457" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
