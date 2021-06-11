@@ -13,9 +13,9 @@ public class ChessBoard {
 
     public Color playerTurn ;
     public boolean Over ;
-
     public boolean red_in_checked ;
     public boolean black_in_checked;
+    public Color winner;
 
     public ChessPiece BlackGeneral;
     public ChessPiece RedGeneral;
@@ -82,6 +82,10 @@ public class ChessBoard {
         return PieceColor(point) != Color.NONE;
     }
 
+    public ChessPiece getPiece(Point pos){
+        return this.tile[pos.x][pos.y];
+    }
+
     public boolean tileExist(Point point){
         if(point.x < 0) return false;
         if(point.y < 0) return false;
@@ -118,6 +122,7 @@ public class ChessBoard {
         }
         updateAttackTiles();
         updateInChecked();
+        updateTurn();
     }
 
     public void updateBoard(){
@@ -125,6 +130,7 @@ public class ChessBoard {
         updateInChecked();
         updateTurn();
         updateValidTiles();
+        updategameStatus();
     }
 
     public void updateTurn(){
@@ -226,6 +232,45 @@ public class ChessBoard {
         tile[row][4] = new ChessPiece(Type.SOLDIER,color,new Point(row,4));
         tile[row][6] = new ChessPiece(Type.SOLDIER,color,new Point(row,6));
         tile[row][8] = new ChessPiece(Type.SOLDIER,color,new Point(row,8));
+    }
+
+    public void updategameStatus(){
+        if(playerTurn == Color.RED){
+            if(RedHasNoMove()){
+                Over = true;
+                if(red_in_checked)
+                    winner = Color.BLACK;
+                else stalemate = true;
+            }
+        }
+        else {
+            if(BlackHasNoMove()){
+                Over = true;
+                if(black_in_checked)
+                    winner = Color.RED;
+                else stalemate = true;
+            }
+        }
+    }
+
+    public boolean RedHasNoMove(){
+        for(int i=0;i<rows;++i)
+            for(int j=0;j<columns;++j){
+                ChessPiece Piece = tile[i][j];
+                if(Piece != null && Piece.color == Color.RED && Piece.moves.validTiles.size() > 0)
+                    return false;
+            }
+        return true;
+    }
+
+    public boolean BlackHasNoMove(){
+        for(int i=0;i<rows;++i)
+            for(int j=0;j<columns;++j){
+                ChessPiece Piece = tile[i][j];
+                if(Piece != null && Piece.color == Color.BLACK && Piece.moves.validTiles.size() > 0)
+                    return false;
+            }
+        return true;
     }
 
 }
