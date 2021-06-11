@@ -3,17 +3,17 @@
 - Visualize Chinese chess
 ## Project Structure
 1. Folder Image: 
-  -Include image icon for each chess piece
+  - Include image icon for each chess piece
 2. Main_Component Folder : 
-  -Include main component classes:
-    -2.A) ChessBoard class
-    -Have properities about chess board and allow you to create a new chessboard and interact with it
-    -2.B) ChessPiece class
-    -Allow you to create a new chess piece
-    -2.C) Controller
-    -2.D) StartGame
-    -Allow you to create a new game
-    -2.E) View
+  - Include main component classes:
+    - 2.A) ChessBoard class
+    - Have properities about chess board and allow you to create a new chessboard and interact with it
+    - 2.B) ChessPiece class
+    - Allow you to create a new chess piece
+    - 2.C) Controller
+    - 2.D) StartGame
+    - Allow you to create a new game
+    - 2.E) View
 3. Piece_Properties
   -Include information about each chess piece
   -3.A) Color (Enum Class)
