@@ -15,13 +15,13 @@
     - Allow you to create a new game
     - 2.E) View
 3. Piece_Properties
-  - Include information about each chess piece
-  - 3.A) Color (Enum Class)
-  - Represent which side chess piece on
-  - 3.B) Moves
-  - Represent how chess piece move
-  - 3.C) Type (Enum Class)
-  - Represent which type of the chess piece 
+  - Include information about each chess piece:
+    - 3.A) Color (Enum Class)
+    - Represent which side chess piece on
+    - 3.B) Moves
+    - Represent how chess piece move
+    - 3.C) Type (Enum Class)
+    - Represent which type of the chess piece 
 4. Test folder : 
   - Include test to make sure program works well 
 ## Execution plan 
