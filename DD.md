@@ -37,7 +37,11 @@
   - Include test to make sure program works well 
 ## Execution plan 
   - Stages:
-  - Piece_Properties : 3/6
-  - Main_Component:
+    - Piece_properties folder : 3/6
+    - Main_Component folder:
+      - ChessBoard and ChessPiece classes : 6/6
+      - View and Button classes : 8/6
+      - Command and CommandManager class : 11/6
+    - Listeners folder : 11/6
 ## Result 
 ![image](https://github.com/Maybenex1ime/Something_Personal/blob/main/ScreenShot/199799014_582521089567981_3398538406345156789_n.png?raw=true)
