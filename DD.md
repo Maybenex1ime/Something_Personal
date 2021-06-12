@@ -1,6 +1,7 @@
 # Design_Document
 ## Fuction Details
 - Visualize Chinese chess
+- For better understanding about demo, please spend time to read the rules here : http://gambiter.com/xiangqi/
 ## Project Structure
 1. Folder Image: 
   - Include image icon for each chess piece
