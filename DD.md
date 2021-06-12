@@ -36,8 +36,8 @@
 5. Test folder : 
   - Include test to make sure program works well 
 ## Execution plan 
-  - Running main function in StartGame class
-  - A view of chessboard will be created for viewer
-  - Program will receive command from player via buttons, then execute it
+  - Stages:
+  - Piece_Properties : 3/6
+  - Main_Component:
 ## Result 
 ![image](https://github.com/Maybenex1ime/Something_Personal/blob/main/ScreenShot/199799014_582521089567981_3398538406345156789_n.png?raw=true)
