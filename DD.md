@@ -36,4 +36,4 @@
   - Include test to make sure program works well 
 ## Execution plan 
 ## Result 
-https://github.com/Maybenex1ime/Something_Personal/blob/main/ScreenShot/199799014_582521089567981_3398538406345156789_n.png?raw=true
+![image](https://github.com/Maybenex1ime/Something_Personal/blob/main/ScreenShot/199799014_582521089567981_3398538406345156789_n.png?raw=true)
