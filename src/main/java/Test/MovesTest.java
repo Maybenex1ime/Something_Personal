@@ -4,13 +4,11 @@ package Test;
 import Main_Component.ChessBoard;
 import Main_Component.ChessPiece;
 import Piece_Properties.Moves;
-import main.java.Piece_Properties.Color;
-import main.java.Piece_Properties.Type;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * \brief
@@ -94,20 +92,10 @@ public class MovesTest {
         assertEquals(board.tile[7][1].moves.validTiles.size(), 12);
         assertEquals(board.tile[7][7].moves.validTiles.size(), 12);
 
-        board.movePiece(board.tile[2][1],new Point(2,4));
-        board.movePiece(board.tile[6][4],new Point(5,4));
-        board.movePiece(board.tile[3][4],new Point(4,4));
+        board.movePiece(board.tile[2][1],new Point(2,2));
+        board.updateBoard();
         board.updateValidTiles();
-        assertEquals(board.tile[5][4].moves.validTiles.size(),0);
-        /*board.movePiece(board.tile[5][4],new Point(4,4));
-        board.updateAttackTilesOneColor(Color.RED);
-        board.updateInChecked();
-
-        assertTrue(board.black_in_checked);
-        */
-        board.movePiece(board.tile[5][4],new Point(4,4));
-        board.updateValidTiles();
-        assertFalse(board.tile[4][4].moves.validTiles.size() == board.tile[4][4].moves.attackTiles.size());
+        assertEquals(board.tile[2][2].moves.attackTiles.size(),8);
     }
 
     @Test

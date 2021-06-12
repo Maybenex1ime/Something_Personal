@@ -35,7 +35,7 @@ public class RestartListener extends MouseAdapter {
             currentButton.setBackground(java.awt.Color.GREEN);
         else
             currentButton.setBackground(null);
-        if (view.whiteRestart.getBackground() == java.awt.Color.GREEN && view.blackRestart.getBackground() == java.awt.Color.GREEN){
+        if (view.RedRestart.getBackground() == java.awt.Color.GREEN && view.blackRestart.getBackground() == java.awt.Color.GREEN){
             javax.swing.JOptionPane.showMessageDialog(null, "Both players agreed to restart. Score will be tied (i.e. remain the same)");
             controller.reset();
         }

@@ -104,12 +104,12 @@ public class Moves {
         //Horse can be blocked
         if(!board.pieceExist(new Point(piece.pos.x + 1,piece.pos.y))){
             possiblePoint(board, piece,  2,  1);
-            possiblePoint(board, piece, -2,  1);
+            possiblePoint(board, piece, 2,  -1);
 
         }
         if(!board.pieceExist(new Point(piece.pos.x - 1,piece.pos.y))){
-            possiblePoint(board, piece, -2, -1);
-            possiblePoint(board, piece,  2, -1);
+            possiblePoint(board, piece, -2, 1);
+            possiblePoint(board, piece,  -2, -1);
         }
         if(!board.pieceExist(new Point(piece.pos.x ,piece.pos.y + 1))){
             possiblePoint(board, piece,  1,  2);
@@ -156,21 +156,37 @@ public class Moves {
             }
         }
 
+        //Cannon must hop to attack
+        if(piece.type == Type.CANNON){
+            //Empty Tile
+            if(!board.pieceExist(testPos) && !hopped){
+                piece.moves.attackTiles.add(testPos);
+                return Color.NONE;
+            }
+            if(!board.pieceExist(testPos) && hopped) return Color.NONE;
+            if(board.pieceExist(testPos) && hopped) {
+                if(piece.color != board.tile[testPos.x][testPos.y].color){
+                    piece.moves.attackTiles.add(testPos);
+                }
+                return board.tile[testPos.x][testPos.y].color;
+            }
+            if(board.pieceExist(testPos) && !hopped) {
+                hopped = true;
+                return Color.NONE;
+            }
+        }
+
         if(!board.pieceExist(testPos)){
             piece.moves.attackTiles.add(testPos); //Empty Tile
-            if(piece.type == Type.CANNON && hopped) piece.moves.attackTiles.remove(testPos);
         return Color.NONE;
         }
         if(board.pieceExist(testPos)){
             if(piece.color != board.tile[testPos.x][testPos.y].color){
                 piece.moves.attackTiles.add(testPos);
-                if(piece.type == Type.CANNON && !hopped) {piece.moves.attackTiles.remove(testPos);
-                hopped = true;
-                return Color.NONE;
-                }
             }
             return board.tile[testPos.x][testPos.y].color;
         }
+
         return null;
     }
 
@@ -205,6 +221,8 @@ public class Moves {
             ChessPiece possibleCapturedPiece = virtualboard.tile[newPosition.x][newPosition.y];
 
             virtualboard.movePiece(virtualpiece, newPosition);
+            virtualboard.updateAttackTilesOneColor(opponentColor);
+            virtualboard.updateInChecked();
 
             /* Test for valid moves - avoid "Discover Check" */
             //if (Doesn't cause "Discover check" on own King)

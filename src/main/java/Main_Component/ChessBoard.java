@@ -120,9 +120,8 @@ public class ChessBoard {
             if(piece.color == Color.RED && piece.pos.x == 5) piece.type = Type.UNLOCKED;
             if(piece.color == Color.BLACK && piece.pos.x == 4) piece.type = Type.UNLOCKED;
         }
-        updateAttackTiles();
-        updateInChecked();
-        updateTurn();
+        //updateAttackTiles();
+        //updateInChecked();
     }
 
     public void updateBoard(){

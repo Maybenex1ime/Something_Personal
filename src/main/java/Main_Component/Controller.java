@@ -21,6 +21,8 @@ public class Controller {
 
     public Controller(){
         initializeVariables();
+        view = new View(chessBoard, this);
+        addMouseListeners();
     }
 
     public void reset(){
@@ -50,11 +52,10 @@ public class Controller {
         }
         view.addMouseListener(new UndoListener(this), view.undoButton);
         view.addMouseListener(new RedoListener(this), view.redoButton);
-        view.addMouseListener(new ForfeitListener(this), view.whiteForfeit);
+        view.addMouseListener(new ForfeitListener(this), view.RedForfeit);
         view.addMouseListener(new ForfeitListener(this), view.blackForfeit);
-        view.addMouseListener(new RestartListener(this), view.whiteRestart);
+        view.addMouseListener(new RestartListener(this), view.RedRestart);
         view.addMouseListener(new RestartListener(this), view.blackRestart);
         view.addMouseListener(new NewGameListener(this, true), view.classicMode);
-        view.addMouseListener(new NewGameListener(this, false), view.customMode);
     }
 }

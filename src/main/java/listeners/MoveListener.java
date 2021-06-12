@@ -46,7 +46,7 @@ public class MoveListener extends MouseAdapter {
     public void getReadyForMove(MouseEvent event){
         /* Find the valid tiles we can move to */
         Button currentButton = (Button) event.getSource();	//gets the Button that this MouseEvent happened on
-        ChessPiece chessPiece = chessBoard.tile[currentButton.yPos][currentButton.xPos];
+        ChessPiece chessPiece = chessBoard.tile[currentButton.xPos][currentButton.yPos];
         if (chessPiece != null && chessPiece.color == chessBoard.playerTurn){
             controller.buttonsToHighlight.add(currentButton);
             for (Point point : chessPiece.moves.validTiles){

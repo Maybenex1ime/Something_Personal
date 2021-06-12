@@ -16,28 +16,28 @@ public class View{
     public Controller controller;					///< The view has access to the Controller
     public JFrame frame;							///< We will put a JPanel (which contains 64 JButtons) on this
     public JPanel panel;							///< Will add 64 Buttons to this panel, and add the JPanel to the JFrame
-    public Button[][] button = new Button[8][8];	///< 64 Buttons on Panel
+    public Button[][] button = new Button[10][9];	///< 64 Buttons on Panel
 
-    private final int frameHeight = 739;			///< Picked to make a square JFrame of ~600 pixels.
-    private final int frameWidth = 917;				///< Picked to make a square JFrame of ~600 pixels.
-    private final int boardWidth = 600; 			///< Approximate number of Pixels on square board
+    private final int frameHeight = 814;			///< Picked to make a square JFrame of ~600 pixels.
+    private final int frameWidth = 1067;				///< Picked to make a square JFrame of ~600 pixels.
+    private final int boardWidth = 675; 			///< Approximate number of Pixels on square board
     private final int squareIconLength = 75;		///< length of square's edge for the icons we're using
 
     public JButton undoButton;						///< Allows for undoing chess moves
     public JButton redoButton;						///< Allows for redoing chess moves
 
-    public JTextField statusBox;					///< Used to display information when WHITE or BLACK is in check
+    public JTextField statusBox;					///< Used to display information when Red or BLACK is in check
 
-    public JTextField whiteName;					///< Used to display unique name for WHITE Player
+    public JTextField RedName;					///< Used to display unique name for Red Player
     public JTextField blackName;					///< Used to display unique name for BLACK Player
 
-    public JTextField whiteScore;					///< Used to display number of games WHITE has won
+    public JTextField RedScore;					///< Used to display number of games Red has won
     public JTextField blackScore;					///< Used to display number of games BLACK has won
 
-    public JButton whiteForfeit;					///< Used to give WHITE the option to forfeit a game
+    public JButton RedForfeit;					///< Used to give Red the option to forfeit a game
     public JButton blackForfeit;					///< Used to give BLACK the option to forfeit a game
 
-    public JButton whiteRestart;					///< Used to give WHITE the option to restart a game (if opponent agrees)
+    public JButton RedRestart;					///< Used to give Red the option to restart a game (if opponent agrees)
     public JButton blackRestart;					///< Used to give BLACK the option to restart a game (if opponent agrees)
 
     public JButton classicMode;						///< Used to create a new game in "Classic" mode
@@ -62,7 +62,7 @@ public class View{
         panel = new JPanel(null);
         for (int row = 0; row < chessBoard.rows; row++){
             for (int column = 0; column < chessBoard.columns; column++){
-                button[row][column] = new Button(column, row);
+                button[row][column] = new Button(row, column);
             }
         }
         /* Set up JFrame */
@@ -81,8 +81,8 @@ public class View{
                     currentButton.setIcon(currentPiece.imageIcon);
 
                 /* Set bounds for the button */
-                int xPositionGUI = getXPositionGUI(column);
-                int yPositionGUI = getYPositionGUI(row);
+                int xPositionGUI = getXPositionGUI(row);
+                int yPositionGUI = getYPositionGUI(column);
                 currentButton.setBounds(xPositionGUI, yPositionGUI, squareIconLength, squareIconLength);
 
                 setBackground(currentButton);
@@ -104,24 +104,24 @@ public class View{
         /* Show which player's turn it is */
         if (chessBoard.playerTurn == Color.RED){
             blackName.setBackground(null);
-            whiteName.setBackground(java.awt.Color.GREEN);
-            whiteForfeit.setEnabled(true);
+            RedName.setBackground(java.awt.Color.GREEN);
+            RedForfeit.setEnabled(true);
             blackForfeit.setEnabled(false);
-            whiteRestart.setEnabled(true);
+            RedRestart.setEnabled(true);
             blackRestart.setEnabled(false);
         }
         else{
             blackName.setBackground(java.awt.Color.GREEN);
-            whiteName.setBackground(null);
-            whiteForfeit.setEnabled(false);
+            RedName.setBackground(null);
+            RedForfeit.setEnabled(false);
             blackForfeit.setEnabled(true);
-            whiteRestart.setEnabled(false);
+            RedRestart.setEnabled(false);
             blackRestart.setEnabled(true);
         }
 
         /* Determine if players are in check or checkmate */
         if (chessBoard.winner == Color.RED){
-            javax.swing.JOptionPane.showMessageDialog(null, "Checkmate. White Wins!");
+            javax.swing.JOptionPane.showMessageDialog(null, "Checkmate. Red Wins!");
             controller.redGamesWon++;
             controller.reset();
         }
@@ -131,7 +131,7 @@ public class View{
             controller.reset();
         }
         else if (chessBoard.red_in_checked){
-            statusBox.setText("White In Check");
+            statusBox.setText("Red In Check");
             statusBox.setBackground(java.awt.Color.YELLOW);
         }
         else if (chessBoard.black_in_checked){
@@ -160,36 +160,36 @@ public class View{
     }
 
     /**
-     * Creates unique names (JTextfields) for BLACK and WHITE
+     * Creates unique names (JTextfields) for BLACK and Red
      * @param panel		The panel to attach the JTextFields to
      */
     public void createNames(JPanel panel){
         blackName = new JTextField("Black Player: Player 2");
-        blackName.setBounds(650, 20, 200, 40);
+        blackName.setBounds(800, 20, 200, 40);
         blackName.setBackground(null);
         blackName.setBorder(null);
         blackName.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(blackName);
-        whiteName = new JTextField("White Player: Player 1");
-        whiteName.setBounds(650, 540, 200, 40);
-        whiteName.setBackground(java.awt.Color.GREEN);
-        whiteName.setBorder(null);
-        whiteName.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(whiteName);
+        RedName = new JTextField("Red Player: Player 1");
+        RedName.setBounds(800, 540, 200, 40);
+        RedName.setBackground(java.awt.Color.GREEN);
+        RedName.setBorder(null);
+        RedName.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(RedName);
     }
 
     /**
-     * Creates scores for BLACK and WHITE
+     * Creates scores for BLACK and Red
      * @param panel		The panel to attach the JTextFields to
      */
     public void createScores(JPanel panel){
-        whiteScore = new JTextField("White Score: " + controller.redGamesWon);
-        whiteScore.setBounds(610, 480, 100, 40);
-        whiteScore.setEditable(false);
-        whiteScore.setBorder(null);
-        panel.add(whiteScore);
+        RedScore = new JTextField("Red Score: " + controller.redGamesWon);
+        RedScore.setBounds(760, 480, 100, 40);
+        RedScore.setEditable(false);
+        RedScore.setBorder(null);
+        panel.add(RedScore);
         blackScore = new JTextField("Black Score: " + controller.blackGamesWon);
-        blackScore.setBounds(610, 80, 100, 40);
+        blackScore.setBounds(760, 80, 100, 40);
         blackScore.setBorder(null);
         blackScore.setEditable(false);
         panel.add(blackScore);
@@ -201,7 +201,7 @@ public class View{
      */
     public void createUndoButton(JPanel panel){
         undoButton = new JButton("Undo");
-        undoButton.setBounds(630, 250, 100, 40);
+        undoButton.setBounds(780, 250, 100, 40);
         panel.add(undoButton);
     }
 
@@ -211,7 +211,7 @@ public class View{
      */
     public void createRedoButton(JPanel panel){
         redoButton = new JButton("Redo");
-        redoButton.setBounds(630, 310, 100, 40);
+        redoButton.setBounds(780, 310, 100, 40);
         panel.add(redoButton);
     }
 
@@ -221,7 +221,7 @@ public class View{
      */
     public void createStatusBox(JPanel panel){
         statusBox = new JTextField("Have Fun!!!");
-        statusBox.setBounds(250, 620, 110, 40);
+        statusBox.setBounds(250, 695, 110, 40);
         statusBox.setBorder(null);
         statusBox.setBackground(null);
         statusBox.setHorizontalAlignment(SwingConstants.CENTER);
@@ -233,11 +233,11 @@ public class View{
      * @param panel		The panel to attach the JTextFields to
      */
     public void createForfeitButtons(JPanel panel){
-        whiteForfeit = new JButton("White Forfeit");
-        whiteForfeit.setBounds(720, 500, 150, 30);
-        panel.add(whiteForfeit);
+        RedForfeit = new JButton("Red Forfeit");
+        RedForfeit.setBounds(870, 500, 150, 30);
+        panel.add(RedForfeit);
         blackForfeit = new JButton("Black Forfeit");
-        blackForfeit.setBounds(720, 70, 150, 30);
+        blackForfeit.setBounds(870, 70, 150, 30);
         panel.add(blackForfeit);
     }
 
@@ -246,11 +246,11 @@ public class View{
      * @param panel		The panel to attach the JTextFields to
      */
     public void createRestartButtons(JPanel panel){
-        whiteRestart = new JButton("White Restart");
-        whiteRestart.setBounds(720, 460, 150, 30);
-        panel.add(whiteRestart);
+        RedRestart = new JButton("Red Restart");
+        RedRestart.setBounds(870, 460, 150, 30);
+        panel.add(RedRestart);
         blackRestart = new JButton("Black: Restart");
-        blackRestart.setBounds(720, 110, 150, 30);
+        blackRestart.setBounds(870, 110, 150, 30);
         panel.add(blackRestart);
     }
 
@@ -259,12 +259,9 @@ public class View{
      * @param panel		The panel to attach the JTextFields to
      */
     public void createModeButtons(JPanel panel){
-        classicMode = new JButton("New Game - Classic Mode");
-        classicMode.setBounds(450, 660, 200, 30);
+        classicMode = new JButton("New Game ");
+        classicMode.setBounds(600, 735, 200, 30);
         panel.add(classicMode);
-        customMode = new JButton("New Game - Custom Mode");
-        customMode.setBounds(670, 660, 200, 30);
-        panel.add(customMode);
     }
 
     public void setBackground(Button button){
@@ -294,7 +291,7 @@ public class View{
     }
 
     public Button getButton(Point point){
-        return button[point.y][point.x];
+        return button[point.x][point.y];
     }
 
     /**
