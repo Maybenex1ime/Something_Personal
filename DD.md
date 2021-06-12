@@ -31,7 +31,7 @@
     - 3.3) Type (Enum Class)
     - Represent which type of the chess piece 
 4. Listeners
-  - Include MouseAdapter classes, which connect your action with program via pressing button
+  - Include extension of MouseAdapter classes, which connect your action with program via pressing button
 5. Test folder : 
   - Include test to make sure program works well 
 ## Execution plan 
