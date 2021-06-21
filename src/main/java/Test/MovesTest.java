@@ -53,7 +53,7 @@ public class MovesTest {
 
         //Move a piece
         board.movePiece(board.tile[2][1], new Point(6,1));
-
+        board.updateBoard();
         assertEquals(board.tile[6][1].moves.attackTiles.size(),7);
 
         board.movePiece(board.tile[0][1], new Point(2,2));
@@ -108,5 +108,15 @@ public class MovesTest {
         board.movePiece(board.tile[7][1],new Point(7,3));
         board.updateAttackTiles();
         assertEquals(testPiece.moves.attackTiles.size(),8);
+    }
+
+    @Test
+    public void testGeneral(){
+        ChessBoard board = new ChessBoard(10,9);
+        board.movePiece(board.tile[3][4],new Point(6,4));
+        board.movePiece(board.tile[6][4],new Point(6,3));
+        board.updateBoard();
+        assertEquals(board.tile[0][4].moves.attackTiles.size(),2);
+        assertEquals(board.tile[9][4].moves.attackTiles.size(),2);
     }
 }

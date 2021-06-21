@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 
 /**
  * \brief
- * Enables a player to restart a game if both WHITE and BLACK players agree
+ * Enables a player to restart a game if both RED and BLACK players agree
  * @author Rodney Shaghoulian
  */
 public class RestartListener extends MouseAdapter {

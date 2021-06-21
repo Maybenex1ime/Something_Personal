@@ -146,7 +146,7 @@ public class ChessBoard {
         /* Loop through board */
         for (int row = 0; row < rows; row++){
             for (int column = 0; column < columns; column++){
-                /* If any piece is threatening white's king, player is in check */
+                /* If any piece is threatening Red's king, player is in check */
                 ChessPiece otherPiece = tile[row][column];
                 if (otherPiece != null && otherPiece.color == Color.BLACK){
                     for (Point attackingPosition : otherPiece.moves.attackTiles){

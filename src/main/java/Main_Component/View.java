@@ -14,9 +14,10 @@ import java.awt.event.MouseListener;
 public class View{
     public ChessBoard chessBoard;					///< The view has access to the ChessBoard
     public Controller controller;					///< The view has access to the Controller
-    public JFrame frame;							///< We will put a JPanel (which contains 64 JButtons) on this
-    public JPanel panel;							///< Will add 64 Buttons to this panel, and add the JPanel to the JFrame
-    public Button[][] button = new Button[10][9];	///< 64 Buttons on Panel
+    public JFrame frame;							///< We will put a JPanel (which contains 90 JButtons) on this
+    public JPanel panel;							///< Will add 90 Buttons to this panel, and add the JPanel to the JFrame
+    public Button[][] button = new Button[10][9];	///< 90 Buttons on Panel
+    public JButton River = new JButton();
 
     private final int frameHeight = 814;			///< Picked to make a square JFrame of ~600 pixels.
     private final int frameWidth = 1067;				///< Picked to make a square JFrame of ~600 pixels.
@@ -24,7 +25,7 @@ public class View{
     private final int squareIconLength = 75;		///< length of square's edge for the icons we're using
 
     public JButton undoButton;						///< Allows for undoing chess moves
-    public JButton redoButton;						///< Allows for redoing chess moves
+    public JButton redoButton;
 
     public JTextField statusBox;					///< Used to display information when Red or BLACK is in check
 
@@ -70,7 +71,11 @@ public class View{
         frame.setLocationRelativeTo(null);						//null indicates the window is placed in the center of the screen
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        /* Loop through board - Create 64 Buttons. Add them to the JPanel */
+        River.setBounds(375,0,20,675);
+        River.setBackground(java.awt.Color.CYAN);
+        panel.add(River);
+
+        /* Loop through board - Create 90 Buttons. Add them to the JPanel */
         for (int row = 0; row < chessBoard.rows; row++){
             for (int column = 0; column < chessBoard.columns; column++){
 
@@ -80,10 +85,13 @@ public class View{
                 if (currentPiece != null)
                     currentButton.setIcon(currentPiece.imageIcon);
 
-                /* Set bounds for the button */
                 int xPositionGUI = getXPositionGUI(row);
                 int yPositionGUI = getYPositionGUI(column);
-                currentButton.setBounds(xPositionGUI, yPositionGUI, squareIconLength, squareIconLength);
+
+                //Set bounds for the river button
+                /* Set bounds for the button */
+                    if(currentButton.xPos < 5) currentButton.setBounds(xPositionGUI, yPositionGUI, squareIconLength, squareIconLength);
+                    else currentButton.setBounds(  xPositionGUI+20 , yPositionGUI,squareIconLength , squareIconLength);
 
                 setBackground(currentButton);
 
@@ -152,7 +160,6 @@ public class View{
         createNames(panel);
         createScores(panel);
         createUndoButton(panel);
-        createRedoButton(panel);
         createStatusBox(panel);
         createForfeitButtons(panel);
         createRestartButtons(panel);
@@ -184,12 +191,12 @@ public class View{
      */
     public void createScores(JPanel panel){
         RedScore = new JTextField("Red Score: " + controller.redGamesWon);
-        RedScore.setBounds(760, 480, 100, 40);
+        RedScore.setBounds(780, 480, 100, 40);
         RedScore.setEditable(false);
         RedScore.setBorder(null);
         panel.add(RedScore);
         blackScore = new JTextField("Black Score: " + controller.blackGamesWon);
-        blackScore.setBounds(760, 80, 100, 40);
+        blackScore.setBounds(780, 80, 100, 40);
         blackScore.setBorder(null);
         blackScore.setEditable(false);
         panel.add(blackScore);
@@ -205,15 +212,16 @@ public class View{
         panel.add(undoButton);
     }
 
+    public void createRedoButton(JPanel panel){
+        redoButton = new JButton("Redo");
+        redoButton.setBounds(630, 310, 100, 40);
+        panel.add(redoButton);
+    }
+
     /**
      * Creates a "Redo" JButton that lets us redo our previous move
      * @param panel		The panel to attach the JTextFields to
      */
-    public void createRedoButton(JPanel panel){
-        redoButton = new JButton("Redo");
-        redoButton.setBounds(780, 310, 100, 40);
-        panel.add(redoButton);
-    }
 
     /**
      * Creates a status box as a JTextField that will tell us when a player is in check
@@ -221,7 +229,7 @@ public class View{
      */
     public void createStatusBox(JPanel panel){
         statusBox = new JTextField("Have Fun!!!");
-        statusBox.setBounds(250, 695, 110, 40);
+        statusBox.setBounds(325, 695, 110, 40);
         statusBox.setBorder(null);
         statusBox.setBackground(null);
         statusBox.setHorizontalAlignment(SwingConstants.CENTER);
@@ -234,10 +242,10 @@ public class View{
      */
     public void createForfeitButtons(JPanel panel){
         RedForfeit = new JButton("Red Forfeit");
-        RedForfeit.setBounds(870, 500, 150, 30);
+        RedForfeit.setBounds(890, 500, 150, 30);
         panel.add(RedForfeit);
         blackForfeit = new JButton("Black Forfeit");
-        blackForfeit.setBounds(870, 70, 150, 30);
+        blackForfeit.setBounds(890, 70, 150, 30);
         panel.add(blackForfeit);
     }
 
@@ -247,10 +255,10 @@ public class View{
      */
     public void createRestartButtons(JPanel panel){
         RedRestart = new JButton("Red Restart");
-        RedRestart.setBounds(870, 460, 150, 30);
+        RedRestart.setBounds(890, 460, 150, 30);
         panel.add(RedRestart);
         blackRestart = new JButton("Black: Restart");
-        blackRestart.setBounds(870, 110, 150, 30);
+        blackRestart.setBounds(890, 110, 150, 30);
         panel.add(blackRestart);
     }
 
@@ -265,6 +273,12 @@ public class View{
     }
 
     public void setBackground(Button button){
+        //Castle
+        if(3<= button.yPos && button.yPos <=5)
+            if(button.xPos<=2 || button.xPos>=7){
+                button.setBackground(java.awt.Color.RED);
+                return;
+            }
         if ((button.xPos + button.yPos) % 2 == 0)
             button.setBackground(java.awt.Color.GRAY);
         else

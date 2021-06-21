@@ -51,7 +51,6 @@ public class Controller {
             }
         }
         view.addMouseListener(new UndoListener(this), view.undoButton);
-        view.addMouseListener(new RedoListener(this), view.redoButton);
         view.addMouseListener(new ForfeitListener(this), view.RedForfeit);
         view.addMouseListener(new ForfeitListener(this), view.blackForfeit);
         view.addMouseListener(new RestartListener(this), view.RedRestart);

@@ -32,11 +32,11 @@ public class ForfeitListener extends MouseAdapter {
      */
     public void mouseClicked(MouseEvent event){
         if (chessBoard.playerTurn == Color.RED){
-            javax.swing.JOptionPane.showMessageDialog(null, "Black Forfeits. White Wins!");
+            javax.swing.JOptionPane.showMessageDialog(null, "Red Forfeits. Black Wins!");
             controller.redGamesWon++;
         }
         else{
-            javax.swing.JOptionPane.showMessageDialog(null, "White Forfeits. Black Wins!");
+            javax.swing.JOptionPane.showMessageDialog(null, "Black Forfeits. Red Wins!");
             controller.blackGamesWon++;
         }
         controller.reset();
